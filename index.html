@@ -107,7 +107,7 @@
           context.fillStyle = "black";
           context.fillText("Modified image will go here", 10, 20); //brief identifying text
           drawImageIOSFix(secondCtx,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500); //draw og image onto second canvas
-          var imageData = secondContext.getImageData(0, 0, 600, 500); //get image pixel data
+          var imageData = secondCtx.getImageData(0, 0, 600, 500); //get image pixel data
           var data = imageData.data;
           for (var i = 0; i < data.length; i+=4) { //loop for changing each pixel
             data [i] = 0; //red turned to 0
