@@ -101,9 +101,10 @@
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
-          var canvas = document.createElement('secondCanvas');
-          var ctx = canvas.getContext("2d");
-          drawImageIOSFix(context,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500);
+
+          var secondCanvas = document.createElement('dataCanvas'); //second canvas
+          var secondCtx = canvas.getContext("2d");
+          drawImageIOSFix(secondCtx,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500); //draw og image onto second canvas
 
           
           
