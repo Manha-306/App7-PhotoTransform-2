@@ -101,7 +101,7 @@
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
-          var secondCanvas = document.createElement('dataCanvas'); //second canvas
+          var secondCanvas = document.getElementById('dataCanvas'); //second canvas
           var secondCtx = canvas.getContext("2d");
           context.font = '20pt Calibri';
           context.fillStyle = "black";
@@ -145,7 +145,8 @@
       </div>
       <div id="messageDisplayArea"></div>
       
-      <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+      <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas> <!--first canvas-->
+      <canvas id="dataCanvas" width="600" height="500" style="border:1px solid #d3d3d3;"></canvas> <!--second canvas-->
       <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
         var canvas = document.getElementById('myCanvas');
         var context = canvas.getContext("2d");
