@@ -103,9 +103,9 @@
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           var secondCanvas = document.getElementById('dataCanvas'); //second canvas
           var secondCtx = canvas.getContext("2d");
-          context.font = '20pt Calibri';
-          context.fillStyle = "black";
-          context.fillText("Modified image will go here", 10, 20); //brief identifying text
+          secondCtx.font = '20pt Calibri';
+          secondCtx.fillStyle = "black";
+          secondCtx.fillText("Modified image will go here", 10, 20); //brief identifying text
           drawImageIOSFix(secondCtx,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500); //draw og image onto second canvas
           var imageData = secondCtx.getImageData(0, 0, 600, 500); //get image pixel data
           var data = imageData.data;
