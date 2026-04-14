@@ -100,12 +100,8 @@
           /*  +++++++++++++++ BEGIN IMAGE PROCESSING +++++++++++++++ */
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-          /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           var secondCanvas = document.getElementById('dataCanvas'); //second canvas
           var secondCtx = secondCanvas.getContext("2d");
-          secondCtx.font = '20pt Calibri';
-          secondCtx.fillStyle = "black";
-          secondCtx.fillText("Modified image will go here", 10, 20); //brief identifying text
           drawImageIOSFix(secondCtx,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500); //draw og image onto second canvas
           var imageData = secondCtx.getImageData(0, 0, 600, 500); //get image pixel data
           var data = imageData.data;
@@ -122,7 +118,7 @@
       } //  end of reader.onload
       
       reader.readAsDataURL(file);
-    } // end of the if statement checking that file is an image
+    }// end of the if statement checking that file is an image
     else
     {
       // this is what happens if the orignial file selected is not an image file
@@ -153,6 +149,9 @@
         context.font = '20pt Calibri';
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20);
+        secondCtx.font = '20pt Calibri';
+        secondCtx.fillStyle = "black";
+        secondCtx.fillText("Modified image will go here", 10, 20); //brief identifying text
       </script>
 
     </div><!-- /content -->
